@@ -1,0 +1,103 @@
+.result-image {
+    height: 15rem;
+    margin: 0px;
+    overflow: hidden;
+    width: 15rem;
+}
+#pixabay{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+}
+.navbar-menu{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+    align-items: center;
+}
+.navbar_list{
+    display: inline-flex;
+    text-decoration: none;
+}
+.logo-text{
+    font-size: 15px;
+}
+.logo-motto{
+    font-size: 10px;
+    font-family: monospace !important;
+    font-style: italic;
+}
+.about-heading{
+    align-items: center;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-title{
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.4;
+    margin: 0px;
+    padding: 0;
+    text-transform: uppercase;
+}
+.about-text{
+    font-weight: normal;
+    font-size: medium;
+}
+.about-content{
+    align-content: center;
+    justify-content: center;
+    
+}
+.form-heading{
+    font-size: 30px;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+.result-heading{
+    font-size: 30px;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+.form-content{
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    font-size: 24px;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: black;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+button{
+    background-color: teal;
+    border-radius: 3px;
+    padding: 2px;
+}
+button:hover{
+    background-color: rgba(0, 128, 128, 0.384);
+    border-radius: 3px;
+}
+#submit{
+    background-color: teal;
+}

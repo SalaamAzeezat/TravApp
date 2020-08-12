@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Travel</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <h2 class="logo-text">Time Travel</h2>
+          <h3 class="logo-motto">We plan, you pack...</h3>
+        </div>
+        <ul class="navbar-menu">
+          <li class="navbar-list"><a href="#about">About</a></li>
+          <li class="navbar-list"><a href="#planner">Plan trip</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="about" class="section about-section">
+      <div class="about-content">
+        <h1 class="about-heading">Explore the World</h1>
+        <h3 class="about-title">A New Sky, A New Life...</h3>
+        <p class="about-text">We bring to our guests the experience & knowledge to plan your Dream Vacations, Weekend
+          Getaways, Corporate Events, and Special Occasion Vacations. Through our many years of experience and contacts
+          around the world, our planners will help you make the right
+          decisions, within your budget, wherever your plans take you.
+        </p>
+      </div>
+    </section>
+    <section id="appForm" class="section appForm-section">
+      <form id="form" class="form" onsubmit="return Client.handleSubmit(event)">
+        <h2 class="form-heading">Plan your trip</h2>
+        <div class="form-content">
+          <ul>
+            <li>
+              <label class="label" for="currentCity">Departure City:</label>
+              <input type="text" id="currentCity" name="from" placeholder="Enter Departure City here" required>
+            </li>
+            <li>
+              <label class="label" for="destCity">Destination City:</label>
+              <input type="text" id="destCity" name="to" placeholder="Enter Destination City here" required>
+            </li>
+            <li>
+              <label class="label" for="countryCode">Destination Country Code:</label>
+              <input type="text" id="code" name="to" placeholder="Enter Destination Country Code here" required>
+            </li>
+            <li>
+              <label class="label" for="date">Start Date:</label>
+              <input type="date" id="date" name="date" required>
+            </li>
+            <li>
+              <label class="label" for="date">End Date:</label>
+              <input type="date" id="date2" name="date" required>
+            </li>
+          </ul>
+          <div>
+            <button><input type="submit" id="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
+              onsubmit="return Client.handleSubmit(event)">
+            </button>
+          </div>
+      </form>
+  </div>
+  </form>
+  </div>
+  </section>
+  <section id="result" class="section result-section">
+    <div id="result-content">
+      <h2 class="result-heading">Travel Data</h2>
+      <div class="result-image">
+        <img alt="destination image" id="pixabay">
+      </div>
+      <div class="content">
+        <ul>
+          <li><i class="fas fa-map-pin"></i>Destination City: <span id="dest_city"></span></li>
+          <li><i class="fas fa-calendar-day"></i>Departure Date: <span id="departDate"></span></li>
+          <li><i class="fas fa-calendar-day"></i>Arrival Date: <span id="arrivalDate"></span></li>
+          <li>Icon: <span id="weather_icon"></span></li>
+          <li>Temperature: <span id="weather_temp"></span></li>
+          <li>Weather Description: <span id="weather_desc"></span></li>
+          <li>Countdown to Trip: <span id="days"></span></li>
+          <li>City Latitude: <span id="lat"></span> </li>
+          <li>City Longitude: <span id="long"></span> </li>
+        </ul>
+      </div>
+    </div>
+    <div class="buttons">
+    <button class="button" id="print"><a href="#">Print</a></button>
+    <button class="button" id="delete"><a href="#">Delete</a></button>
+    </div>
+  </section>
+  <footer class="footer">
+    <p>All rights reserved ©</p>
+  </footer>
+  <script>
+    //Check for service worker support
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+  </script>
+
+</body>
+
+</html>
